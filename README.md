@@ -5,6 +5,7 @@ The inputs of various sensors for different wafers have been provided. In electr
 •	-1 means that the wafer is faulty and it needs to be replaced. 
 Problem Statement
 To build a classification methodology to predict the quality of wafer sensors based on the given training data. 
+v
 
 Data Description
 The client will send data in multiple sets of files in batches at a given location. Data will contain Wafer names and 590 columns of different sensor values for each wafer. The last column will have the "Good/Bad" value for each wafer.
@@ -16,7 +17,7 @@ Name of the files, Length of Date value in FileName, Length of Time value in Fil
 
 Data Validation 
 In this step, we perform different sets of validation on the given set of training files.  
-1.	 Name Validation- We validate the name of the files based on the given name in the schema file. We have created a regex pattern as per the name given in the schema file to use for validation. After validating the pattern in the name, we check for the length of date in the file name as well as the length of time in the file name. If all the values are as per requirement, we move such files to "Good_Data_Folder" else we move such files to "Bad_Data_Folder."
+1. Name Validation- We validate the name of the files based on the given name in the schema file. We have created a regex pattern as per the name given in the schema file to use for validation. After validating the pattern in the name, we check for the length of date in the file name as well as the length of time in the file name. If all the values are as per requirement, we move such files to "Good_Data_Folder" else we move such files to "Bad_Data_Folder."
 
 2.	 Number of Columns - We validate the number of columns present in the files, and if it doesn't match with the value given in the schema file, then the file is moved to "Bad_Data_Folder."
 
